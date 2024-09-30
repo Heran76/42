@@ -6,23 +6,20 @@ manipulación de cadenas en c
 #include "libft.h"
 #include <stdio.h>
 
-int ft_strlen(const char *src)
+int ft_strlen(const char *str)
 {
-    int indx;
-    indx = 0;
-
-    while(src[indx])
+    int indx = 0;
+    while(str[indx])
      indx++;
-   return(indx);  
+    return(indx); 
 }
-
 int main()
 {
     char input[100];
-    printf("introduzca una cadena: ");
-    scanf("%99s", input);
+    printf("introduce una cadena : ");
+    scanf("%99s",input);
 
-    size_t lenght=ft_strlen(input);
-    printf("la longitud de la cadena es %zu\n ",lenght);
+    size_t longitud=ft_strlen(input);
+    printf("la longitud de la cadena  es %zu\n", longitud);
     return 0;
 }
