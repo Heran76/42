@@ -3,8 +3,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
-
+# include <string.h>
 int     ft_isprint(int c);
 int     ft_isdigit(int c);
 int     ft_isascii(int c);
