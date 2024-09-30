@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/antonioheredia/Documents/curso/Hello42/libt/42cursus_01_Libft/01_original",
+      "program": "/Users/antonioheredia/Documents/curso/Hello42/libt/42cursus_01_Libft/01_original/build/Debug/outDebug"
+    }
+  ]
+}
