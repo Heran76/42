@@ -6,30 +6,31 @@ se utiliza para inicializar bloques de memoria
 
 #include "libft.h"
 #include <stdio.h>
-
-void *ft_memset(void *str, int c, size_t n)
+void *ft_memset(void *s, int c, size_t n)
 {
-    size_t indx;
-    indx = 0;
+    unsigned char *p;
+    p = s;
 
-    while(indx < n)
+    while(n--)
     {
-        *((unsigned char*)str + indx) = c;
-        indx++;
+       *p++ = (unsigned char)c;
     }
-    return(str);
+    return(s);
 }
 
 int main()
 {
     char array[10];
     ft_memset(array, 'A', sizeof(array));
-    printf("El contendio del array despues de pasar por ft_memset ");
-    for(size_t i = 0; i < sizeof(array); i++)
+
+    printf("El contenido del array despues de pasar por ft_meset : ");
+    for(size_t i = 0; i <sizeof(array); i++)
     {
-      printf("%c ",array[i]);
+        printf("%c ",array[i]);
     }
     return 0;
+
+    
 }
 
 

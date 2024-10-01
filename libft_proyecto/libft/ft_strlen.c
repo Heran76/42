@@ -10,16 +10,17 @@ int ft_strlen(const char *str)
 {
     int indx = 0;
     while(str[indx])
-     indx++;
-    return(indx); 
+    indx++;
+    return(indx);
 }
+
 int main()
 {
     char input[100];
-    printf("introduce una cadena : ");
+    printf("Escribe una cadena de caracteres : ");
     scanf("%99s",input);
 
     size_t longitud=ft_strlen(input);
-    printf("la longitud de la cadena  es %zu\n", longitud);
+    printf("La longitud de la cadena '%s' es : %zu\n", input, longitud);
     return 0;
 }
