@@ -17,7 +17,7 @@ int ft_isprint(int c)
 
 int main(){
     
-    char test_char[]={65,35,48,40,32};
+    int test_char[]={65,35,48,40,160};
     int num_test = sizeof(test_char) / sizeof(test_char[0]);
     
     for(int i = 0; i <num_test; i++)

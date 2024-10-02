@@ -8,19 +8,19 @@ manipulación de cadenas en c
 
 int ft_strlen(const char *str)
 {
-    int indx = 0;
+    char indx = 0;
     while(str[indx])
-    indx++;
-    return(indx);
+     indx++;
+    return(indx); 
 }
 
 int main()
 {
     char input[100];
-    printf("Escribe una cadena de caracteres : ");
+    printf("Escribe una cadena : ");
     scanf("%99s",input);
 
     size_t longitud=ft_strlen(input);
-    printf("La longitud de la cadena '%s' es : %zu\n", input, longitud);
-    return 0;
+    printf("la cadena %s tiene una longitud de %zu\n", input,longitud);
+    return(0);
 }

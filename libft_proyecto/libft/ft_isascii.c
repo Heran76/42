@@ -8,24 +8,22 @@ retorna 1 si el caracter es ASCII y 0 en caso Contrario.
 
 int ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
+    if(c>=0 && c <=127)
      return(1);
     return(0); 
 }
 
 int main()
 {
-    int c = 65;
-    int b = 68;
+    int text_char[]={65,128,35,127,160};
+    int text_num = sizeof(text_char) / sizeof(text_char[0]);
 
-    if(ft_isascii(c))
-     printf("ft_isacii(%c)= %d\n",c,c);
-    else
-     printf("ft_isascii(%c)= %d\n",c,c);
-
-     if(ft_isascii(b))
-      printf("ft_isacii(%c) = %d",b,b);
-     else
-      printf("ft_isacii(%c) = %d",b,b); 
-    return 0;  
+    for(int i = 0; i < text_num; i++)
+    {
+        if(ft_isascii(text_char[i]))
+         printf("ft_isalascii(%d) = '%c' es valor ASCII\n",text_char[i],text_char[i]);
+        else
+        printf("ft_isalascii(%d) = %c no es valor ASCII\n",text_char[i],text_char[i]); 
+    }
+    return(0);
 }

@@ -8,39 +8,22 @@
 
 int ft_isdigit(int c)
 {
-    if(c>='0' && c <='9')
+    if(c >='0' && c <='9')
      return(1);
     return(0); 
 }
 
 int main()
-{   char test1 = '0';
-    char test2 = 'A';
-    char test3 = '9';
-    char test4 = 'z';
+{
+    char text_digit[]={'0','t','9','5','%'};
+    int tex_num = sizeof(text_digit) / sizeof(text_digit[0]);
 
-    if(ft_isdigit(test1))
-     printf("ft_isdigit(%c) es un digito \n",test1);
-    else
-     printf("ft_isdigit(%c) no es un digito \n",test1);
-
-     if(ft_isdigit(test2))
-      printf("ft_isdigit(%c) es un digito.\n",test2);
-     else
-      printf("ft_isdigit(%c) no es un digito \n",test2);
-     
-     if(ft_isdigit(test3))
-      printf("ft_isdigit(%c) es un digito. \n",test3);
-     else 
-      printf("ft_isdigit(%c) no es un digito. \n",test3);
-
-      if(ft_isdigit(test4))
-       printf("ft_isdigit(%c) es un digito \n",test4);
-      else
-       printf("ft_isdigit(%c) no es un digito \n",test4);
-
-   return 0;   
-    
+    for(int i = 0; i<tex_num; i++)
+    {
+        if(ft_isdigit(text_digit[i]))
+         printf("ft_isdigit(%c) es un digito\n",text_digit[i]);
+        else
+        printf("ft_isdigit(%c) no es un digito\n",text_digit[i]); 
+    }
+    return(0);
 }
-
-

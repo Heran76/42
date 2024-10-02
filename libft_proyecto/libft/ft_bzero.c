@@ -9,9 +9,10 @@ void ft_bzero(void *s, size_t n)
 {
     unsigned char *p;
     p = s;
+
     while(n)
     {
-        *p++ = 0;
+        *p++=0;
         --n;
     }
 }
@@ -19,10 +20,10 @@ void ft_bzero(void *s, size_t n)
 int main()
 {
     char str[50]="Hola mundo";
-    printf("Antes del ft_bzero %s\n", str);
+    printf("Antes de ft_bzero %s\n", str);
 
     ft_bzero(str, 5);
-    printf("Despues de ft_bzero: ");
+    printf("despues de ft_bzero:");
 
     for(int i = 0; i < 15; i++)
     {
@@ -31,5 +32,6 @@ int main()
         else
         printf("%c",str[i]); 
     }
+    printf("\n");
     return 0;
 }
